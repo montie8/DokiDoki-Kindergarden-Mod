@@ -268,7 +268,60 @@ label kindergarden_natsuki:
     return
 
 label kindergarden_yuri:
-    "Yuri Route Coming Soon... "
+
+    "I decide to go look what's Yuri doing right now."
+    "I found her pretty quickly, she was sitting by the wall reading a book."
+    "Wait a minute,"
+    "A book."
+    "I guess this kindergarten is full of prodigies."
+
+    ms_j "Everything ok mister [player]?"
+    mc "Yes, i just thought of something, everything is fine."
+    "I quickly smile at her, while walking towards Yuri"
+    mc "Hi Yuri, what are you reading?"
+    by "H-Hey."
+
+    "She looks so startled by my arrival. I just hope she doesn't want to kill me now."
+    "I softly repeat my question." 
+
+    by "This novel is named {i}'Walking towards the time'{/i}."
+    by "It's a book with very deep meanings, for example the main hero is an anomaly that can turn back the time."
+    by "He uses his ability to help the police investigate through various cases, oftenly leading to solving it..."
+    by "But one da..."
+
+    "Yuri looks like she just realized she said something wrong."
+    "Immediatly after that she starts whispering to herself"
+
+    by "im such an idiot..."
+    mc "Hey, don't say that! You did nothing wrong!"
+    by "but i spoiled almost the whole book..."
+    mc "That doesn't mean you have to say bad things about yourself"
+    "She looks at me with her purple eyes full of tears"
+    by "are you {i}*sigh*{/i} sure?"
+    mc "I am sure, now wipe out your tears, let's read your book"
+
+    "Mis Jones looks impressed by the fact that i easily calmed down Yuri."
+    "Mom might thought right that im good with kids."
+    "I gently take Yuri to sit on my lap for us to find a nice spot where to read."
+    "Then we started."
+    "We continue like that for almost ten minutes."
+    "Wow, just wow,"
+    "The book was pretty difficult for me so how about for four years old Yuri."
+
+    ms_j "Mister [player]?"
+    mc "I'm sorry, i have to go. It was nice reading with you."
+    by "Really?"
+    "She looks at me with the happiest face i ever saw."
+    mc "It was awesome! I can't wait to read with you the next time!"
+    "What a book..."
+    ms_j "Mister [player], I can't find Sayori. Can you please look for her?"
+    mc "Sure, i'm gonna find her."
+    ms_j "She said she is going to the class next to us for the pencils."
+    mc "Ok."
+
+    "Time to find a kid ehehe-..."
+  
+    "To be continued"
     
     return
 
