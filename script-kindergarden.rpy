@@ -1,20 +1,31 @@
 label kindergarden_main:
 
-    $ msj_name = "Miss J"
-    $ npc_name = "???"
+    $ mse_name = "Miss Emiko"
+    $ npc_name = "Receptionist"
     $ bs_name = "Sayori"
     $ bm_name = "Monika"
     $ bn_name = "Natsuki"
     $ by_name = "Yuri"
-
-    scene bg bedroom 
+    
+    scene bg sayori_bedroom
     with dissolve_scene_full
+    show sayori 2t zorder 2 at t11
+    s "[Player]...? Why did you do this to us? Why?"
+    s 2u "Please..."
+    s "Don't let it happen again."
+    s 3f "Save them."
+    s 4w "SAVE."
+    s "THEM."
+    
+    scene bg bedroom 
+    with 
     play music k1 
 
     $ restore_all_characters()
-
+    
     "That's the third one this week..."
     "These messed up reocurring dreams are starting to get to me."
+    "I've never seen anybody looking like that before, who even are they?"
     "I guess it's made me realise how unstructured my life is."
     "They say a job will keep you occupied, but what would I even do?"
     "I'm way too weak for heavy- or even light labor."
@@ -77,19 +88,18 @@ label kindergarden_main:
     scene bg class_day
     with wipeleft_scene
 
-    "Once I had finally found it, I entered the class, noticing the teacher, who i presumed to be Miss Jones."
+    "Once I had finally found it, I entered the class, noticing the teacher, who i presumed to be Miss Emiko."
     "She had short blonde hair in a half bun, and she wore professional neat clothes."
     "She looked around 20-25 years old.
-    (Her full name is Miss Jones, but i'll just write ms j, cause it's easier."
-    ms_j "Hi, are you the new EA?"
-    mc "Yeah, I am. I'm guessing you're Miss Jones?"
-    ms_j "Yup! Here you'll do tasks like, individually helping children, setting up activites, marking work, and that kind of thing."
+    ms_e "Hi, are you the new EA?"
+    mc "Yeah, I am. I'm guessing you're Miss Emiko?"
+    ms_e "Yup! Here you'll do tasks like, individually helping children, setting up activites, marking work, and that kind of thing."
     mc "Okay, where are all the kids though? It's a weekday, right?"
     "Miss Jones chuckled, then begin to speak."
-    ms_j "They're at their music lesson right now."
-    ms_j "They stay in the same classroom all day except for special activities, such as computer, music, sport, and all that."
-    ms_j "It's a nice time to relax and be in peace and quiet, ahah!"
-    "Miss Jones seemed quite friendly and kind. I laughed back at her joke, and started doing some training work."
+    ms_e "They're at their music lesson right now."
+    ms_e "They stay in the same classroom all day except for special activities, such as computer, music, sport, and all that."
+    ms_e "It's a nice time to relax and be in peace and quiet, ahah!"
+    "Miss Emiko seemed quite friendly and kind. I laughed back at her joke, and started doing some training work."
     "I started by marking some of the student's maths work, which was quite tedious, but it'd be worth it."
     "Soon, I hear the sounds of children giggling and running over to the classroom."
     "I assume that'd be the students."
@@ -97,7 +107,7 @@ label kindergarden_main:
     # The 4 girls enter 
     # have each girl go up a zorder
 
-    ms_j "Hello everyone! How was music?"
+    ms_e "Hello everyone! How was music?"
 
     show yuri 1k zorder 2 at t44
     show natsuki 1k zorder 2 at t43
@@ -114,12 +124,12 @@ label kindergarden_main:
     show natsuki 1k zorder 1 at s43
     show monika 1k zorder 1 at s42
     show sayori 1k zorder 1 at s41
-    ms_j "This is Yuri,"
+    ms_e "This is Yuri,"
 
     show yuri 1k zorder 1 at s44
     show sayori 1k zorder 3 at f21    
     
-    ms_j "Sayori,"
+    ms_e "Sayori,"
 
     show sayori 1k zorder 1 at s41
     show natsuki 1k zorder 3 at f32
@@ -129,7 +139,7 @@ label kindergarden_main:
     show natsuki 1k zorder 1 at s43
     show monika 1k zorder 3 at f32
     
-    ms_j "And Monika!"
+    ms_e "And Monika!"
 
     hide monika
     hide natsuki
@@ -144,7 +154,7 @@ label kindergarden_main:
 
     bs "This is boooooringgg!"
     bs "Can we play some games?"
-    ms_j "Soon Sayori, be patient."
+    ms_e "Soon Sayori, be patient."
 
     show yuri 1k zorder 2 at s44
     show sayori 1k zorder 2 at s22
@@ -161,11 +171,11 @@ label kindergarden_main:
 
     "It took me a while to realise that Monika, the brown haired one was gone."
     mc "Where'd Monika go?"
-    ms_j "That's a good question..."
+    ms_e "That's a good question..."
     "After a quick glance around the room, I saw Monika in the corner reading a book, I walked up to her and crouched down."
 
     # cg here
-
+    
     mc "Are you okay?"
     "She glanced up at me."
     bm "Yeah."
@@ -275,51 +285,62 @@ label kindergarden_yuri:
     "A book."
     "I guess this kindergarten is full of prodigies."
 
-    ms_j "Everything ok mister [player]?"
-    mc "Yes, i just thought of something, everything is fine."
+    ms_j "Everything going alright, [player]?"
+    mc "Yeah, It's nothing."
     "I quickly smile at her, while walking towards Yuri"
     mc "Hi Yuri, what are you reading?"
-    by "H-Hey."
+    "She's silent."
 
-    "She looks so startled by my arrival. I just hope she doesn't want to kill me now."
+    "She didn't notice me."
     "I softly repeat my question." 
-
-    by "This novel is named {i}'Walking towards the time'{/i}."
-    by "It's a book with very deep meanings, for example the main hero is an anomaly that can turn back the time."
-    by "He uses his ability to help the police investigate through various cases, oftenly leading to solving it..."
+    
+    by "O-oh! Hi..."
+    "She seemed rather startled by my sudden appearance."
+    by "This novel is named {i}'Moving Towards Time'{/i}."
+    by "It's a book with very deep meanings, like the good guy can turn back time.."
+    by "He uses his ability to help the police investigate through many cases, oftenly leading to saving the city..."
     by "But one da..."
 
     "Yuri looks like she just realized she said something wrong."
     "Immediatly after that she starts whispering to herself"
 
-    by "im such an idiot..."
+    by "I-I'm such an idiot..."
     mc "Hey, don't say that! You did nothing wrong!"
-    by "but i spoiled almost the whole book..."
-    mc "That doesn't mean you have to say bad things about yourself"
+    by "But I just- J-just spoiled the whole b-book..."
+    "Yuri's face starts to go red, she seems as if she's about to cry."
+    mc "That doesn't mean you have to say mean things about yourself!"
     "She looks at me with her purple eyes full of tears"
-    by "are you {i}*sigh*{/i} sure?"
-    mc "I am sure, now wipe out your tears, let's read your book"
+    by "{i}*sigh*{/i} H-how do you k-know that...?"
+    "She looked up at me with hope, a puddle of water on her desk where she sat."
+    mc "I am sure, now wipe away those tears, let's read your book"
+    mc "You're so mature and clever Yuri, nobody deserves to feel upset, especially you."
 
-    "Mis Jones looks impressed by the fact that i easily calmed down Yuri."
-    "Mom might thought right that im good with kids."
+    "Mis Emiko looks impressed by the fact that I easily calmed down Yuri."
+    "Mom might've thought right that I know my way with kids."
     "I gently take Yuri to sit on my lap for us to find a nice spot where to read."
-    "Then we started."
+    "We decided to sit down outside, on the bench."
+    
+    # switch bg here, to some outside thing
+    
+    "Then we began."
     "We continue like that for almost ten minutes."
     "Wow, just wow,"
-    "The book was pretty difficult for me so how about for four years old Yuri."
+    "The book was quite mature for a kindergartener, Yuri was definetely unique."
 
-    ms_j "Mister [player]?"
-    mc "I'm sorry, i have to go. It was nice reading with you."
+    ms_e "[player]? I need some help..."
+    mc "I have to go, It was nice reading with you Yuri.""
     by "Really?"
-    "She looks at me with the happiest face i ever saw."
+    "She looks at me with the happiest face I ever saw."
     mc "It was awesome! I can't wait to read with you the next time!"
     "What a book..."
-    ms_j "Mister [player], I can't find Sayori. Can you please look for her?"
-    mc "Sure, i'm gonna find her."
-    ms_j "She said she is going to the class next to us for the pencils."
-    mc "Ok."
+    "I stand up and walk up to Miss Emiko, ready for my next task."
+    ms_e "[player], I can't find Sayori. Can you please look for her?"
+    mc "Sure, Where'd you last see her?"
+    ms_e "She said she is going to the class next to us for the pencils."
+    ms_e "She doesn't know her way around school very well, I'm afraid she may have gotten lost..."
+    mc "Alright, I'll find her."
 
-    "Time to find a kid ehehe-..."
+    "Time to find a Sayori..."
   
     "To be continued"
     
