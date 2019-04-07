@@ -2,26 +2,38 @@ label kindergarden_main:
 
     $ mse_name = "Miss Emiko"
     $ npc_name = "Receptionist"
-    $ bs_name = "Sayori"
+    $ bs_name = "???"
     $ bm_name = "Monika"
     $ bn_name = "Natsuki"
     $ by_name = "Yuri"
+
+    $ restore_all_characters()
+
     
     scene bg sayori_bedroom
     with dissolve_scene_full
-    show sayori 2t zorder 2 at t11
-    s "[Player]...? Why did you do this to us? Why?"
-    s 2u "Please..."
-    s "Don't let it happen again."
-    s 3f "Save them."
-    s 4w "SAVE."
-    s "THEM."
-    
-    scene bg bedroom 
-    with 
     play music k1 
+    show sayori 2t zorder 2 at t11
+    bs "[player]...? Why did you do this to us? Why?"
 
-    $ restore_all_characters()
+    show sayori 2u zorder 2 at t11
+    bs "Please..."
+    bs "Don't let it happen again."
+
+    show sayori 3f zorder 2 at t11
+    bs "Save them."
+
+    show sayori 4w zorder 2 at t11
+    bs "SAVE."
+    bs "THEM."
+
+    $ bs_name = "Sayori"
+
+    stop music fadeout 1.0
+    scene bg bedroom 
+    with wipeleft_scene
+  
+
     
     "That's the third one this week..."
     "These messed up reocurring dreams are starting to get to me."
@@ -32,7 +44,7 @@ label kindergarden_main:
     "Although, my mom did always say I was good with kids."
     "And well, there is a kindergarten hiring nearby."
 
-    stop music fadeout 1.0
+    
 
     
     scene bg closet #scene bg cafe
@@ -81,7 +93,7 @@ label kindergarden_main:
     "I first noticed a lady sitting at the desk, she calmly lifted her head, looking up at me."
     npc "Hello! You must be [player]."
     mc "Yeah, I am. I'm here as an EA...?"
-    npc "Yes, you'll be working with Miss Jones in KM1."
+    npc "Yes, you'll be working with Miss Emiko in KM1."
     mc "Thank you."
     "I wandered around the nicely decorated building, looking for a class labeled KM1."
 
@@ -90,12 +102,12 @@ label kindergarden_main:
 
     "Once I had finally found it, I entered the class, noticing the teacher, who i presumed to be Miss Emiko."
     "She had short blonde hair in a half bun, and she wore professional neat clothes."
-    "She looked around 20-25 years old.
+    "She looked around 20-25 years old."
     ms_e "Hi, are you the new EA?"
     mc "Yeah, I am. I'm guessing you're Miss Emiko?"
     ms_e "Yup! Here you'll do tasks like, individually helping children, setting up activites, marking work, and that kind of thing."
     mc "Okay, where are all the kids though? It's a weekday, right?"
-    "Miss Jones chuckled, then begin to speak."
+    "Miss Emiko chuckled, then begin to speak."
     ms_e "They're at their music lesson right now."
     ms_e "They stay in the same classroom all day except for special activities, such as computer, music, sport, and all that."
     ms_e "It's a nice time to relax and be in peace and quiet, ahah!"
@@ -117,7 +129,7 @@ label kindergarden_main:
     "I hear a jumble of 'Good!' 'Fun' and other opinions from the 4 girls."
     "It's suprising there's only 4, it's rather strange considering other schools nomally have around 20 students per class."
     "But I decide to ignore it anyway."
-    ms_j "Children, this is our new friend, [player]!"
+    ms_e "Children, this is our new friend, [player]!"
     "The girls smile at me."
 
     show yuri 1k zorder 3 at f22
@@ -134,7 +146,7 @@ label kindergarden_main:
     show sayori 1k zorder 1 at s41
     show natsuki 1k zorder 3 at f32
 
-    ms_j "Natsuki,"
+    ms_e "Natsuki,"
     
     show natsuki 1k zorder 1 at s43
     show monika 1k zorder 3 at f32
@@ -267,9 +279,9 @@ label kindergarden_natsuki:
     mc "Yeah, I'm okay, thank you..."
     "Does this mean-"
     "No, I don't even want to think about it."
-    "I need to tell Miss Jones."
+    "I need to tell Miss Emiko."
     mc "I have to go do something, It was nice watching your cartoon with you, Natsuki!"
-    n "Bye bye!"
+    bn "Bye bye!"
     "She smiled innocently, that innocent smile was so adorable, but after hearing what she just said..."
     "It was more sinister than anything."
 
@@ -285,7 +297,7 @@ label kindergarden_yuri:
     "A book."
     "I guess this kindergarten is full of prodigies."
 
-    ms_j "Everything going alright, [player]?"
+    ms_e "Everything going alright, [player]?"
     mc "Yeah, It's nothing."
     "I quickly smile at her, while walking towards Yuri"
     mc "Hi Yuri, what are you reading?"
@@ -328,7 +340,7 @@ label kindergarden_yuri:
     "The book was quite mature for a kindergartener, Yuri was definetely unique."
 
     ms_e "[player]? I need some help..."
-    mc "I have to go, It was nice reading with you Yuri.""
+    mc "I have to go, It was nice reading with you Yuri."
     by "Really?"
     "She looks at me with the happiest face I ever saw."
     mc "It was awesome! I can't wait to read with you the next time!"
