@@ -17,15 +17,17 @@ label kindergarden_main:
     bs "[player]...? Why did you do this to us? Why?"
 
     show sayori 2u zorder 2 at t11
-    bs "Please..."
-    bs "Don't let it happen again."
+    s "Please..."
+    s "Don't let it happen again."
+    s "There's no hope for us in the future."
+    s "You have to go back, you have to prevent this."
 
     show sayori 3f zorder 2 at t11
-    bs "Save them."
+    s "Save them."
 
     show sayori 4w zorder 2 at t11
-    bs "SAVE."
-    bs "THEM."
+    s "SAVE."
+    s "THEM."
 
     $ bs_name = "Sayori"
 
@@ -47,7 +49,7 @@ label kindergarden_main:
     
 
     
-    scene bg closet #scene bg cafe
+    scene bg cafe_background # added background to the mod_content file
     with wipeleft_scene
 
     "It's been a few days since I filled out the interview for a teacher helper at the kindergarten."
@@ -80,15 +82,7 @@ label kindergarden_main:
     
     scene bg corridor #scene bg school outside 
     with wipeleft_scene
-
-    "The building was rather large for a primary school..."
-    "Kinglow Primary... Heh.."
-    "The name is nice, it just slides off your tongue."
-
     
-    scene bg club_day #scene bg inside of school
-    with wipeleft_scene
-
     "I entered the building, the smell of fresh air conditioning and strong perfume drifted around me."
     "I first noticed a lady sitting at the desk, she calmly lifted her head, looking up at me."
     npc "Hello! You must be [player]."
@@ -202,11 +196,8 @@ label kindergarden_main:
     bm "You should."
     "She spoke confidently but somehow a bit rudely."
     mc "Alright, I'll take it into consideration."
-
-    # Space To Possibly
-
-    # make scene longer
-
+    "I watched her read for a bit, she seemed extremely focused, a feeling of determination in her eyes."
+    "
     # bg classroom
 
     "I didn't want to bother her anymore, so I stood up and went to join the others."
@@ -223,7 +214,9 @@ label kindergarden_main:
     return
 
 label kindergarden_natsuki:
-
+    
+    show natsuki 1k zorder 3 at t21
+    
     "I decide to go with Natsuki first."
     "I noticed her looking at one of the shared ipads they had in the classroom."
     "She sat at one of the desks, watching intensly."
@@ -248,6 +241,9 @@ label kindergarden_natsuki:
     bn "I-if you want to watch you can."
     mc "Thank you."
     "I pulled a seat from another desk and sat myself next to her."
+    
+    # cg here
+    
     mc "What's it about?"
     bn "Just watch to find out."
     mc "That's not very polite..."
@@ -256,36 +252,42 @@ label kindergarden_natsuki:
     bn "It's a series, not a movie!"
     "She scolded me angrily, I obviously said something wrong there."
     mc "Sorry, what else do you do other than watch this series?"
-    bn "I like to help mommy make cookies..."
-    mc "Hm? Help mom make cookies?"
+    bn "I like to help daddy make cookies..."
+    mc "Hm? Help dad make cookies?"
     "I smiled at the scene, it was adorable."
     bn "Y-yeah..."
     mc "That's nice of you."
-    bn "Well, I would help her make cookies, but, I can't.."
+    bn "Well, he doesn't like me."
     mc "Why is that?"
-    "I assumed it'd be because they ran out of ingredients, or her mother was out of town."
-    bn "She went away a while ago."
-    bn "I don't know where she went, daddy said she went to go live in another house."
-    bn "He didn't tell me why."
-    bn "But when she went to go live somewhere else, daddy has been mean to me."
-    bn "B-but don't tell anybody! He'd be really mad if i told anybody about it."
-    bn "So pretend you heard nothing."
-    "Holy shit."
-    "I can't even believe what I just heard."
-    "This was a whole new level of what the hell."
-    "I just sat there staring into space, trying to process all this information."
-    bn "Mister [player]? Are you okay?"
-    "I was interrupted from my thoughts."
-    mc "Yeah, I'm okay, thank you..."
-    "Does this mean-"
-    "No, I don't even want to think about it."
-    "I need to tell Miss Emiko."
-    mc "I have to go do something, It was nice watching your cartoon with you, Natsuki!"
+    "My mind began to fill with horrible possibilies that might be why she'd think her dad didn't like her..."
+    bn "He's not very nice."
+    bn "It doesn't matter though."
+    bn "You wouldn't care."
+    "A chill went down my spine."
+    "It seemed like a touchy subject for her, and I didn't want to force her to explain more."
+    mc "Alright then, don't feel like you can't tell me things, Natsuki."
+    mc "I'm always here if you want to talk to me about anything."
+    "She muttered out a small 't-thanks' and continued watching her show."
+    "I quickly changed the topic."
+    mc "So, what's your favourite school subject, Natsuki?"
+    bn "Oh, I like to cook! And dance, it's fun."
+    "Hearing her talk about her hobbies and giving that adorable honest smile made my heart melt."
+    mc "Who taught you to cook?"
+    bn "Uh... My mommy..."
+    "Natsuki spoke anxiously, as if she was afraid to answer."
+    mc "Is she a good cook?"
+    bn "She {i}was{i/} a good cook..."
+    "Oh boy... Here we go again."
+    mc "I-it's alright, just calm down, let's talk about something else!"
+    "I gave a nervous laugh and attempted to change the subject."
+    bn "Ok then. Can we talk about Parfait Princesses?"
+    mc "Of course.. Hah.. ha.."
+    "For the next 10 minutes, I sat there pretending to listen to Natsuki ramble on and on about some kid's show."
+    "Really, I was just scrolling through my phone, but she doesn't know that!"
+    "Either way, she had fun explaining it to me, right?"
+    mc "That's really cool! Although, unfortunately I have to go now."
     bn "Bye bye!"
-    "She smiled innocently, that innocent smile was so adorable, but after hearing what she just said..."
-    "It was more sinister than anything."
-
-    "To Be Continue.."
+    "She smiled a sweet, honest smile. It made me feel special, considering how rare it was for her to open up to people."
 
     return
 
@@ -321,7 +323,7 @@ label kindergarden_yuri:
     by "But I just- J-just spoiled the whole b-book..."
     "Yuri's face starts to go red, she seems as if she's about to cry."
     mc "That doesn't mean you have to say mean things about yourself!"
-    "She looks at me with her purple eyes full of tears"
+    "She looks at me with her glossy purple eyes full of tears"
     by "{i}*sigh*{/i} H-how do you k-know that...?"
     "She looked up at me with hope, a puddle of water on her desk where she sat."
     mc "I am sure, now wipe away those tears, let's read your book"
@@ -332,18 +334,38 @@ label kindergarden_yuri:
     "I gently take Yuri to sit on my lap for us to find a nice spot where to read."
     "We decided to sit down outside, on the bench."
     
-    # switch bg here, to some outside thing
+    scene bg outside_school
     
     "Then we began."
     "We continue like that for almost ten minutes."
     "Wow, just wow,"
     "The book was quite mature for a kindergartener, Yuri was definetely unique."
-
+    "I'm interrupted by Yuri nudging my arm a bit."
+    by "H-hey, d-do you like it?"
+    mc "Yeah, it's really good."
+    "I nodded, giving her a shallow response."
+    "I mean, she's like, 6 years old or something."
+    "What do you expect me to do, give her an hour long full on book review?"
+    "Yuri smiled faintly, flicking to the next page."
+    by "That's good."
+    by "A lot of the other kids make fun of me, I-I d-don't know why.."
+    by "You're different..."
+    "Small tears welled up in her eyes, but she was smiling at the same time."
+    mc "Yuri, if anybody is being rude to you, you have to let a grown-up know."
+    mc "It's not nice of them to do that."
+    "I couldn't believe children would be cruel enough to bully poor Yuri."
+    "I guess kids are brutal."
+    by "Yeah, I k-know..."
+    by "They said I c-cry too much, and that I'm like a baby."
+    mc "Yuri, you're so mature and smart, don't listen to them!"
+    "I wiped the tears from her eyes and closed the book to prevent it from getting wet."
+    
     ms_e "[player]? I need some help..."
     mc "I have to go, It was nice reading with you Yuri."
     by "Really?"
     "She looks at me with the happiest face I ever saw."
     mc "It was awesome! I can't wait to read with you the next time!"
+    by "Bye!"
     "What a book..."
     "I stand up and walk up to Miss Emiko, ready for my next task."
     ms_e "[player], I can't find Sayori. Can you please look for her?"
