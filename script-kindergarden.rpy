@@ -17,17 +17,17 @@ label kindergarden_main:
     bs "[player]...? Why did you do this to us? Why?"
 
     show sayori 2u zorder 2 at t11
-    s "Please..."
-    s "Don't let it happen again."
-    s "There's no hope for us in the future."
-    s "You have to go back, you have to prevent this."
+    bs "Please..."
+    bs "Don't let it happen again."
+    bs "There's no hope for us in the future."
+    bs "You have to go back, you have to prevent this."
 
     show sayori 3f zorder 2 at t11
-    s "Save them."
+    bs "Save them."
 
     show sayori 4w zorder 2 at t11
-    s "SAVE."
-    s "THEM."
+    bs "SAVE."
+    bs "THEM."
 
     $ bs_name = "Sayori"
 
@@ -197,7 +197,7 @@ label kindergarden_main:
     "She spoke confidently but somehow a bit rudely."
     mc "Alright, I'll take it into consideration."
     "I watched her read for a bit, she seemed extremely focused, a feeling of determination in her eyes."
-    "
+    
     # bg classroom
 
     "I didn't want to bother her anymore, so I stood up and went to join the others."
@@ -384,3 +384,357 @@ label kindergarden_sayori:
     "Sayori Route Coming Soon... "
     
     return
+
+# ES
+label kindergarden_main_es:
+    $ mse_name = "Señorita Emiko"
+    $ npc_name = "Recepcionista"
+    $ bs_name = "Sayori"
+    $ bm_name = "Monika"
+    $ bn_name = "Natsuki"
+    $ by_name = "Yuri"
+    
+    scene bg sayori_bedroom
+    with dissolve_scene_full
+    show sayori 2t zorder 2 at t11
+    bs "[player]...? Por que nos hiciste esto? Por que?"
+    bs 2u "Por favor..."
+    bs "No dejes que vuelva a pasar."
+    bs 3f "Salvalas."
+    bs 4w "SALVA."
+    bs "LAS."
+    
+    scene bg bedroom 
+    with wipeleft_scene
+    play music k1 
+
+    $ restore_all_characters()
+    
+    "Este es el tercero en esta semana..."
+    "Estos alocados sueños están empezando a afectarme."
+    "Nunca he visto a nadie así antes, quienes son?"
+    "Supongo que me he dado cuenta de lo descontrolada que es mi vida."
+    "Dijeron que un trabajo me mantendria ocupado, ¿pero que podría hacer?"
+    "Soy muy débil para duros- o hasta trabajos fáciles."
+    "Por otro lado, mi madre siempre dijo que soy bueno con los niños."
+    "I bueno, hay una guardería aquí al lado buscando gente a la que contratar."
+
+    stop music fadeout 1.0
+
+    
+    scene bg closet #scene bg cafe
+    with wipeleft_scene
+
+    "Han pasado unos dias desde la entrevista de trabajo para ser maestro ayudante de la guardería."
+    "Supongo que me llamarán en algún momento de esta semana para decirme si estoy contratado o no."
+    "Hoy estuve en un café con algunos amigos, estábamos saliendo, poniéndonos al día, todo eso."
+    "Todo iba bien hasta que me ha entrado una llamada en medio de una conversación."
+    "Me disculpo y me voy lejos de la mesa."
+    
+    scene bg house #bg outside cafe
+    with wipeleft_scene
+
+    npc "Buenos dias, ¿usted es [player], correcto?"
+    mc "Sí, soy yo."
+    npc "Perfecto. Te hemos llamado para informarte de que has sido aceptado como maestro ayudante."
+    "Me dije un 'Sí' a mí mismo mientras sonreía entusiasmado."
+    mc "Es bueno oir eso!"
+    npc "Tu primer turno es el lunes a las 9 am. Nos vemos allí."
+    mc "Esta bien, adiós."
+    "Colgué y me dirigí a mi asiento, sonriendo incontroladamente."
+    "Alardeé de mi nuevo trabajo, y terminé de comer."
+
+    scene bg kitchen
+    with wipeleft_scene
+
+    "Antes de darme cuenta, ya era lunes."
+    "Me desperté temprano, me vestí y comí mi desayuno."
+    "Nunca había estado tan entusiasmado de trabajar."
+    "Dirigiendome hacia la puerta, entro en el coche y conduzco hasta llegar al parquing de la guarderia."
+
+    
+    scene bg corridor #scene bg school outside 
+    with wipeleft_scene
+
+    "El recinto es bastante grande para una guarderia..."
+    "Kinglow Primary... Heh.."
+    "El nombre es bonito, simplemente se desliza fuera de tu lengua."
+
+    
+    scene bg club_day #scene bg inside of school
+    with wipeleft_scene
+
+    "Entro en el edificio, el olor a aire acondicionado fresco y un fuerte perfume flota a mi alrededor.."
+    "Lo primero que veo es una señora en una especie de recepción, ella relajadamente levanta la cabeza, mirandome."
+    npc "Hola! Tu debes ser [player]."
+    mc "Yeah, Si, estoy aquí como maestro ayudante...?"
+    npc "Sí, trabajarás con la señorita Umiko en la clase KM1."
+    mc "Gracias."
+    "Deambulé por el edificio bien decorado, buscando una clase etiquetada como KM1."
+
+    scene bg class_day
+    with wipeleft_scene
+
+    "Una vez que finalmente lo encontré, entré a la clase, notando a la maestra, que supuse que era la señorita Emiko."
+    "Tiene el pelo rubio y corto en un medio moño, vestiendo ropa profesional y pulcra.."
+    "Parece que tiene entre 20 y 25 años."
+    ms_e "Hola, ¿eres el maestro ayudante?"
+    mc "Si, ese soy yo. Supongo que usted es la señorita Umiko"
+    ms_e "¡Sip! Aquí realizarás tareas como: ayudar individualmente a los niños, configurar actividades, marcar el trabajo y ese tipo de cosas.."
+    mc "Okay, pero donde están los niños? Es entre semana, verdad?"
+    "La señorita Umiko se rie, luego empieza a hablar."
+    ms_e "Ahora están en clase de música."
+    ms_e "Se quedan en el mismo salón de clases todo el día, excepto para actividades especiales, como informatica, música, deportes y todo eso."  
+    ms_e "Está bien tener un rato para relajarse, ahah!"
+    "La señorita Emiko parecía bastante amable. Me rio de su broma y comienzo a entrenarme.."
+    "Comienzo marcando algunos de los trabajos matemáticos de los estudiantes, lo cual es bastante tedioso, pero vale la pena."
+    "Pronto, escucho los sonidos de niños riendo y corriendo al salón de clases.."
+    "Asumo que son los estudiantes."
+    
+    # The 4 girls enter 
+    # have each girl go up a zorder
+
+    ms_e "Hola a todos! Que tal la clase de música?"
+
+    show yuri 1k zorder 2 at t44
+    show natsuki 1k zorder 2 at t43
+    show monika 1k zorder 2 at t42
+    show sayori 1k zorder 2 at t41
+
+    "Oigo un revoltijo de '¡Bien!' 'Divertida' y otras opiniones de las 4 chicas.."
+    "Es sorprendente que solo haya 4, es bastante extraño considerando que otras escuelas tienen aproximadamente 20 estudiantes por clase.."
+    "Decido ignorarlo."
+    ms_e "Niñas,este es vuestro nuevo amigo, [player]!"
+    "Las niñas sonrien al verme."
+
+    show yuri 1k zorder 3 at f22
+    show natsuki 1k zorder 1 at s43
+    show monika 1k zorder 1 at s42
+    show sayori 1k zorder 1 at s41
+    ms_e "Esta es Yuri,"
+
+    show yuri 1k zorder 1 at s44
+    show sayori 1k zorder 3 at f21              
+    ms_e "Sayori,"
+
+    show sayori 1k zorder 1 at s41
+    show natsuki 1k zorder 3 at f32
+
+    ms_e "Natsuki,"
+    
+    show natsuki 1k zorder 1 at s43
+    show monika 1k zorder 3 at f32
+    
+    ms_e "Y Monika!"
+
+    hide monika
+    hide natsuki
+    hide sayori
+    show yuri 1k zorder 3 at t11
+    
+    by "H-hola..."
+    "La que aparentemente se llamaba Yuri, habló con una voz calmada y baja. Su cabello morado cubre la mayor parte de su cara.."
+
+    show yuri 1k zorder 2 at s22
+    show sayori 1k zorder 3 at t11
+
+    bs "Esto es aburriiiidoo!"
+    bs "Podemos jugar a algo?"
+    ms_e "Pronto Sayori, se paciente."
+
+    show yuri 1k zorder 2 at s44
+    show sayori 1k zorder 2 at s22
+    show natsuki 1k zorder 3 at t21
+
+    bn "Que es un pashente?"
+    "Yuri contuvo una risita, tratando de no reírse del intento de Natsuki."
+    bn "¡¿Que es tan gracioso?!"
+    by "N-nada..."
+
+    hide natsuki
+    hide sayori
+    hide yuri 
+
+    "Me tomó un tiempo darme cuenta de que Monika, la de cabello castaño se había ido."
+    mc "¿Dónde se ha ido Monika?"
+    ms_e "Esa es una buena pregunta..."
+    "Después de echar un rápido vistazo por la habitación, vi a Monika en la esquina leyendo un libro, me acerqué a ella y me agaché .."
+
+    # cg here
+    
+    mc "Estás bien?"
+    "She glanced up at me."
+    bm "Seh."
+    mc "¿Qué estás leyendo?"
+    "Ella simplemente me volvió la parte delantera del libro, manteniendo la boca cerrada.."
+    "Leo el título: {i}'Programación para tontos'{/i}."
+    mc "Hm? Te gusta programar?"
+    "Me sorprendió bastante que alguien tan joven como ella estuviera interesado en eso.."
+    "Ella asiente."
+    bm "Te gusta programar?..."
+    mc "Es decir,nunca lo he int-"
+    bm "Deberias."
+    "Ella habló con confianza, pero de alguna manera un poco grosera."
+    mc "De acuerdo, lo consideraré ."
+
+    # Space To Possibly
+
+    # make scene longer
+
+    # bg classroom
+
+    "No quería molestarla más, así que me levanté y fui a reunirme con los demás.."
+    "Aunque, encontré que todos se habían separado para hacer sus propias actividades.."
+    menu:
+        "¿A quién debería hablarle primero?"
+        "Natsuki":
+            call kindergarden_natsuki_es
+        "Yuri":
+            call kindergarden_yuri_es
+        "Sayori":
+            call kindergarden_sayori_es
+
+    return
+
+label kindergarden_natsuki_es:
+
+    "Decido ir con Natsuki primero."
+    "La noté mirando uno de los ipads compartidos que tenían en el aula."
+    "Se sentó en uno de los escritorios, observando intensamente.."
+    "Caminé hacia ella para ver que miraba."
+    "Eran dibujos animados."
+    "El estilo era mono, como un anime pero para niños."
+    mc "Hola,¿qué estás viendo?"
+    bn "P-parfait Princesses series 11..."
+    "Habla tan flojo que apenas la escucho."
+    mc "¿Qué es eso?"
+    bn "PARFAIT PRINCESSES SERIES 11! ¡¿ERES SORDO O QUÉ?!"
+    "Me sorprendió su repentina ira.."
+    "Todos en la clase nos miraron."
+    bn "Hmph..."
+    "Ella continua mirando los dibujos animados."
+    mc "¿Puedo verlos?"
+    bn "No te gustarán..."
+    mc "¿Por qué crees que no me gustarán?"
+    bn "Es para niños. Todo el mundo quiere ver y hacer cosas de adultos ..."
+    mc "Bueno, te puede gustar lo que quieras."
+    "Pude ver casi una chispa aparecer en sus ojos cuando dije esto."
+    bn "Pu-puedes mirarlo si quieres..."
+    mc "Gracias."
+    "Saqué un asiento de otro escritorio y me senté a su lado.."
+    mc "¿De qué va?"
+    bn "Miralo y ya lo verás."
+    mc "Eso no es muy educado..."
+    bn "Hmph..."
+    mc "¿Qué más haces aparte de ver esta película?"
+    bn "Es una serie, no una película!"
+    "Ella me regañó enojada, obviamente dije algo malo allí."
+    mc "Lo siento, ¿qué más haces aparte de ver esta serie??"
+    bn "Me gusta ayudar a mamá a hacer galletitas..."
+    mc "Hm? Ayudar a mamá a hacer galletas?"
+    "Sonrio frente a esta escena, es muy adorable."
+    bn "Sí-Sí..."
+    mc "Eso es muy bonito de tu parte."
+    bn "Bueno, la ayudaría a hacer galletas, pero no puedo.."
+    mc "¿Eso por qué?"
+    "Supuse que sería porque se quedaron sin ingredientes, o su madre estaba fuera de la ciudad."
+    bn "Ella se fue hace un rato."
+    bn "No sé a dónde fue, papá dijo que fue a vivir a otra casa.."
+    bn "No me dijo por que."
+    bn "Pero cuando ella se fue a vivir a otro lugar, papá ha sido malo conmigo.."
+    bn "P-¡pero no se lo digas a nadie! Estaría realmente enojado si se lo contara a alguien."    
+    bn "Haz como si no hubieras oido nada."
+    "Mierda."
+    "No puedo creer lo que acabo de oir."
+    "Esto es un nuevo nivel de ¡¿que demonios?!."
+    "Me quedé sentado mirando al espacio, tratando de procesar toda esta información."
+    bn "¿Señor [player]? ¿Esta bien?"
+    "Me interrumpe de mis pensamientos."
+    mc "Seh, estoy bien, gracias..."
+    "¿Esto significa-?"
+    "No, no quiero ni pensarlo."
+    "Tengo que decirselo a la señora Umiko."
+    mc "Tengo que ir a hacer algo, fue agradable ver tu dibujo animado contigo, Natsuki!"
+    bn "Adiós!"
+    "Me sonrie inocentemente, esa sonrisa inocente es tan adorable, pero luego de haber dicho eso..."
+    "Es más siniestra que nada."
+
+    "Continuará.."
+
+    return
+
+label kindergarden_yuri_es:
+
+    "Decido ir a ver que hace Yuri."
+    "La encuentro rápidamente, sentada en una pared leyendo un libro."
+    "Un segundo,"
+    "Un libro."
+    "Supongo que esta guardería está  llena de prodigios."
+
+    ms_e "¿Va todo bien, [player]?"
+    mc "Claro, no es nada."
+    "Sonrio hacia ella y camino hasta Yuri"
+    mc "Hola Yuri, ¿qué lees?"
+    "No dice nada."
+
+    "No se dió cuenta que estoy aquí."
+    "Repito mi pregunta amablemente." 
+    
+    by "O-oh! Hola..."
+    "Parecía bastante sorprendida por mi repentina aparición.."
+    by "Esta novela se llama {i}'Moviendose Por El Tiempo'{/i}."
+    by "Es un libro con significados muy profundos, dondo el bueno puede retroceder el tiempo..."
+    by "Utiliza su capacidad para ayudar a la policía a investigar en muchos casos, lo que a menudo lleva a salvar la ciudad ..."
+    by "Pero un dí..."
+
+    "Yuri parece que acaba de darse cuenta de que dijo algo mal.."
+    "Inmediatamente susurra a ella misma"
+
+    by "S-Soy una idiota..."
+    mc "¡Hey,no digas eso. No hiciste nada malo!"
+    by "Pero y-y-yo te acabo de s-spoilear el li-libro entero..."
+    "Su cara comienza a enrojecerse, como si fuera a llorar."
+    mc "¡Eso no quiere decir que tengas que decir esas cosas feas de ti misma!"
+    "Me mira con sus ojos lilas llenos de lagrimas"
+    by "{i}*suspiro*{/i} Como sabes eso...?"
+    "Ella me mira con esperanza, un charco de agua en su escritorio donde estaba sentada."
+    mc "Estoy seguro, ahora limpiate esas lágrimas y leamos tu libro"
+    mc "Eres muy madura e inteligente, Yuri, nadie merece sentirse mal, especialmente tú.."
+
+    "La señorita Emiko parece impresionada por el hecho de que me calmé fácilmente con Yuri."
+    "Mamá podría haber pensado que yo sé lo que hago con los niños."    
+    "Tomo suavemente a Yuri para que se siente en mi regazo para que podamos encontrar un lugar agradable donde leer."
+    "Decidimos sentarnos afuera, en el banco.."
+    
+    # switch bg here, to some outside thing
+    
+    "Luego comenzamos."
+    "Continuamos así durante 10 min."
+    "Wow, solo wow,"
+    "El libro era bastante maduro para un estudiante de guarderia, Yuri es definitivamente única."
+
+    ms_e "[player]? Necesito ayuda..."
+    mc "Tengo que irme, fue agradable leer contigo Yuri."
+    by "¿Enserio?"
+    "Ella me mira con la cara más feliz que jamás haya visto.."
+    mc "Ha sido increíble! No puedo esperar a leer contigo la próxima vez!"
+    "Vaya libro..."
+    "Me levanto y camino hacia la señorita Emiko, lista para mi próxima tarea."
+    ms_e "[player], No consigo encontrar a Sayori ¿Puedes ayudarme a encontrarla?"
+    mc "Claro ¿Cuando fué la ultima vez que la viste?"
+    ms_e "Dijo que se fué a la clase de al lado a cojer unos lapices."
+    ms_e "Ella no sabe muy bien como orientarse en la escuela, me temo que se ha perdido..."
+    mc "De acuerdo, la encontraré."
+
+    "Hora de encontrar a Sayori..."
+  
+    "Continuará"
+    
+    return
+
+label kindergarden_sayori_es:
+    "Sayori Route Coming Soon... "
+    
+    return
+
+

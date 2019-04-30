@@ -27,8 +27,13 @@ label start:
     
 menu: 
     "Which Game Do You Want To Play?"
-    "Kindergarden Mod":    
-        call kindergarden_main
+    "Kindergarden Mod":
+        menu:
+            "Select Language:"
+            "English":    
+                call kindergarden_main
+            "Español":
+                call kindergarden_main_es
     "Main Game":
         if persistent.playthrough == 0:
 
